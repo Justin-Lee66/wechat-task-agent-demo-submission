@@ -1,0 +1,36 @@
+{% if runs %}
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th data-i18n="snapshot_col">Stage</th>
+          <th data-i18n="mode_col">Mode</th>
+          <th data-i18n="status_col">Status</th>
+          <th data-i18n="messages_col">Messages</th>
+          <th data-i18n="new_tasks_col">New tasks</th>
+          <th data-i18n="updated_col">Updated</th>
+          <th data-i18n="started_col">Started</th>
+          <th data-i18n="error_col">Error</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for run in runs %}
+        <tr>
+          <td>{{ run.id }}</td>
+          <td>{{ run.snapshot_id }}</td>
+          <td>{{ run.extractor_mode }}</td>
+          <td><span class="badge status {{ run.status }}" data-status-label="{{ run.status }}">{{ run.status }}</span></td>
+          <td>{{ run.new_messages_count }}</td>
+          <td>{{ run.new_tasks_count }}</td>
+          <td>{{ run.updated_tasks_count }}</td>
+          <td>{{ run.started_at }}</td>
+          <td>{{ run.error_message or "—" }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% else %}
+  <p class="empty" data-i18n="empty_runs">No ingestion runs yet.</p>
+{% endif %}

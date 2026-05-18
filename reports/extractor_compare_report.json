@@ -1,0 +1,445 @@
+{
+  "baseline": {
+    "canonical_keys": [
+      "1847-hudson-blvd|arrival-map-address-description",
+      "admin-task-ops|sync-all-tasks-to-task-table",
+      "belmont|broker-folder-social-ads-video-update",
+      "belmont|yoyo-jason-youtube-video",
+      "company-blog-agent-front-desk|district-intro-copy",
+      "social-content|yesterday-event-social-publishing",
+      "solene|ai-teaser-video",
+      "solene|broker-email-campaign",
+      "solene|main-visual-poster-first-version",
+      "solene|navigation-arrival-guide",
+      "solene|pr-release",
+      "verona|company-video-room-tour-later",
+      "verona|photo-first-version",
+      "year-end-summit|2025-recap-video",
+      "year-end-summit|final-pptx-pdf-backup",
+      "year-end-summit|final-timed-run-of-show",
+      "year-end-summit|music-files"
+    ],
+    "extra_canonical_keys": [],
+    "localized_text_by_key": {
+      "1847-hudson-blvd|arrival-map-address-description": {
+        "description_zh": "制作正确到达指引地图，并更新 description 与官网中的正确地址输入方式和到达路线。",
+        "title_zh": "到达地图、正确地址与官网描述更新"
+      },
+      "admin-task-ops|sync-all-tasks-to-task-table": {
+        "description_zh": "将 Year-end Summit 年会物料 deadline 同步进任务表，包括 Final .pptx/.pdf backup、2025 recap video、music files 和 final timed run-of-show，确保不要遗漏。",
+        "title_zh": "同步 Year-end Summit 年会物料任务进任务表"
+      },
+      "belmont|broker-folder-social-ads-video-update": {
+        "description_zh": "将周边视频更新进 broker folder，并同步公司 Ins、小红书与广告团队推进。",
+        "title_zh": "周边视频更新与社媒/广告同步"
+      },
+      "belmont|yoyo-jason-youtube-video": {
+        "description_zh": "将 Yoyo + Jason 视频发布到 YouTube，并为 Chris 提供 YouTube 操作支持。",
+        "title_zh": "Yoyo + Jason YouTube 视频发布"
+      },
+      "company-blog-agent-front-desk|district-intro-copy": {
+        "description_zh": "将公司地区介绍文案加入 agent 前台，并提高公司网站 blog 部分权重。",
+        "title_zh": "地区介绍文案加入 agent 前台与官网 blog"
+      },
+      "social-content|yesterday-event-social-publishing": {
+        "description_zh": "将昨日活动内容发布到朋友圈、LinkedIn 和 Instagram，并选择好看的配图。",
+        "title_zh": "昨日活动内容社媒发布"
+      },
+      "solene|ai-teaser-video": {
+        "description_zh": "制作 Coming soon 视频和 30 秒项目视频，并确认是否具备社媒传播能力。",
+        "title_zh": "AI teaser 视频"
+      },
+      "solene|broker-email-campaign": {
+        "description_zh": "完成 broker 版 / buyer 版邮件，至少储备 4 期内容，并确认 broker list 和 schedule 是否就绪。",
+        "title_zh": "Broker Email Campaign"
+      },
+      "solene|main-visual-poster-first-version": {
+        "description_zh": "制作一张主图（楼盘、卖点、价格）和一张信息图（地图、features），并确认是否适合朋友圈/群传播。",
+        "title_zh": "主视觉海报首版"
+      },
+      "solene|navigation-arrival-guide": {
+        "description_zh": "整理 driving 路线、地铁路线、周边 landmark，确保第一次来的人也能顺利到达。",
+        "title_zh": "导航与到达指引"
+      },
+      "solene|pr-release": {
+        "description_zh": "主动联系媒体，准备中英文 press release，并确认是否存在免费曝光渠道。",
+        "title_zh": "PR 发布"
+      },
+      "verona|company-video-room-tour-later": {
+        "description_zh": "照片完成后再做公司视频；家具和时间合适后再安排 room tour。",
+        "title_zh": "公司视频与 room tour 后续拍摄"
+      },
+      "verona|photo-first-version": {
+        "description_zh": "优先交付 Verona 照片首版，再推进后续视频工作。",
+        "title_zh": "照片首版"
+      },
+      "year-end-summit|2025-recap-video": {
+        "description_zh": "导出 2025 recap video，格式为 .mp4 / H.264。",
+        "title_zh": "2025 recap 视频"
+      },
+      "year-end-summit|final-pptx-pdf-backup": {
+        "description_zh": "准备最终 .pptx 与 .pdf backup。",
+        "title_zh": "最终 pptx/pdf 备份"
+      },
+      "year-end-summit|final-timed-run-of-show": {
+        "description_zh": "完成带 cue 的最终 timed run-of-show。",
+        "title_zh": "最终带 cue 的 timed run-of-show"
+      },
+      "year-end-summit|music-files": {
+        "description_zh": "将音乐文件下载到本地，格式为 .mp3 或 .m4a。",
+        "title_zh": "音乐文件本地下载"
+      }
+    },
+    "missing_expected_canonical_keys": [],
+    "role_action_keys": {
+      "Chris": [
+        "belmont|yoyo-jason-youtube-video"
+      ],
+      "Henry": [
+        "verona|company-video-room-tour-later",
+        "verona|photo-first-version"
+      ],
+      "Iris": [
+        "admin-task-ops|sync-all-tasks-to-task-table",
+        "social-content|yesterday-event-social-publishing"
+      ],
+      "Tara.L": [
+        "belmont|broker-folder-social-ads-video-update"
+      ],
+      "阿可": [
+        "1847-hudson-blvd|arrival-map-address-description",
+        "admin-task-ops|sync-all-tasks-to-task-table",
+        "company-blog-agent-front-desk|district-intro-copy",
+        "social-content|yesterday-event-social-publishing"
+      ]
+    },
+    "role_mention_keys": {
+      "Chris": [
+        "belmont|yoyo-jason-youtube-video",
+        "year-end-summit|2025-recap-video",
+        "year-end-summit|final-pptx-pdf-backup",
+        "year-end-summit|final-timed-run-of-show",
+        "year-end-summit|music-files"
+      ],
+      "Henry": [
+        "verona|company-video-room-tour-later",
+        "verona|photo-first-version",
+        "year-end-summit|2025-recap-video",
+        "year-end-summit|final-pptx-pdf-backup",
+        "year-end-summit|final-timed-run-of-show",
+        "year-end-summit|music-files"
+      ],
+      "Iris": [
+        "admin-task-ops|sync-all-tasks-to-task-table",
+        "social-content|yesterday-event-social-publishing",
+        "year-end-summit|2025-recap-video",
+        "year-end-summit|final-pptx-pdf-backup",
+        "year-end-summit|final-timed-run-of-show",
+        "year-end-summit|music-files"
+      ],
+      "Tara.L": [
+        "belmont|broker-folder-social-ads-video-update",
+        "year-end-summit|2025-recap-video",
+        "year-end-summit|final-pptx-pdf-backup",
+        "year-end-summit|final-timed-run-of-show",
+        "year-end-summit|music-files"
+      ],
+      "阿可": [
+        "1847-hudson-blvd|arrival-map-address-description",
+        "admin-task-ops|sync-all-tasks-to-task-table",
+        "company-blog-agent-front-desk|district-intro-copy",
+        "social-content|yesterday-event-social-publishing",
+        "year-end-summit|2025-recap-video",
+        "year-end-summit|final-pptx-pdf-backup",
+        "year-end-summit|final-timed-run-of-show",
+        "year-end-summit|music-files"
+      ]
+    },
+    "runs": [
+      {
+        "error_message": null,
+        "extractor_mode": "text_fixture",
+        "new_messages_count": 3,
+        "new_tasks_count": 5,
+        "run_id": 1,
+        "snapshot_id": "10am",
+        "status": "success",
+        "updated_tasks_count": 0
+      },
+      {
+        "error_message": null,
+        "extractor_mode": "text_fixture",
+        "new_messages_count": 9,
+        "new_tasks_count": 6,
+        "run_id": 2,
+        "snapshot_id": "12pm",
+        "status": "success",
+        "updated_tasks_count": 3
+      },
+      {
+        "error_message": null,
+        "extractor_mode": "text_fixture",
+        "new_messages_count": 3,
+        "new_tasks_count": 6,
+        "run_id": 3,
+        "snapshot_id": "2pm",
+        "status": "success",
+        "updated_tasks_count": 2
+      },
+      {
+        "error_message": null,
+        "extractor_mode": "text_fixture",
+        "new_messages_count": 5,
+        "new_tasks_count": 0,
+        "run_id": 4,
+        "snapshot_id": "done_update",
+        "status": "success",
+        "updated_tasks_count": 5
+      }
+    ],
+    "status_count": {
+      "done": 5,
+      "todo": 12
+    },
+    "task_count_by_project": {
+      "1847 Hudson Blvd": 1,
+      "Admin / Task Ops": 1,
+      "Belmont": 2,
+      "Company Blog / Agent Front Desk": 1,
+      "Social Content": 1,
+      "Solene": 5,
+      "Verona": 2,
+      "Year-end Summit": 4
+    },
+    "total_tasks": 17
+  },
+  "candidate": {
+    "canonical_keys": [
+      "1847-hudson-blvd|arrival-map-address-description",
+      "admin-task-ops|sync-all-tasks-to-task-table",
+      "belmont|broker-folder-social-ads-video-update",
+      "belmont|yoyo-jason-youtube-video",
+      "company-blog-agent-front-desk|district-intro-copy",
+      "social-content|yesterday-event-social-publishing",
+      "solene|ai-teaser-video",
+      "solene|broker-email-campaign",
+      "solene|main-visual-poster-first-version",
+      "solene|navigation-arrival-guide",
+      "solene|pr-release",
+      "verona|company-video-room-tour-later",
+      "verona|photo-first-version",
+      "year-end-summit|2025-recap-video",
+      "year-end-summit|final-pptx-pdf-backup",
+      "year-end-summit|final-timed-run-of-show",
+      "year-end-summit|music-files"
+    ],
+    "extra_canonical_keys": [],
+    "localized_text_by_key": {
+      "1847-hudson-blvd|arrival-map-address-description": {
+        "description_zh": "制作正确到达指引地图，并更新 description 与官网中的正确地址输入方式和到达路线。",
+        "title_zh": "到达地图、正确地址与官网描述更新"
+      },
+      "admin-task-ops|sync-all-tasks-to-task-table": {
+        "description_zh": "将 Year-end Summit 年会物料 deadline 同步进任务表，包括 Final .pptx/.pdf backup、2025 recap video、music files 和 final timed run-of-show，确保不要遗漏。",
+        "title_zh": "同步 Year-end Summit 年会物料任务进任务表"
+      },
+      "belmont|broker-folder-social-ads-video-update": {
+        "description_zh": "将周边视频更新进 broker folder，并同步公司 Ins、小红书与广告团队推进。",
+        "title_zh": "周边视频更新与社媒/广告同步"
+      },
+      "belmont|yoyo-jason-youtube-video": {
+        "description_zh": "将 Yoyo + Jason 视频发布到 YouTube，并为 Chris 提供 YouTube 操作支持。",
+        "title_zh": "Yoyo + Jason YouTube 视频发布"
+      },
+      "company-blog-agent-front-desk|district-intro-copy": {
+        "description_zh": "将公司地区介绍文案加入 agent 前台，并提高公司网站 blog 部分权重。",
+        "title_zh": "地区介绍文案加入 agent 前台与官网 blog"
+      },
+      "social-content|yesterday-event-social-publishing": {
+        "description_zh": "将昨日活动内容发布到朋友圈、LinkedIn 和 Instagram，并选择好看的配图。",
+        "title_zh": "昨日活动内容社媒发布"
+      },
+      "solene|ai-teaser-video": {
+        "description_zh": "制作 Coming soon 视频和 30 秒项目视频，并确认是否具备社媒传播能力。",
+        "title_zh": "AI teaser 视频"
+      },
+      "solene|broker-email-campaign": {
+        "description_zh": "完成 broker 版 / buyer 版邮件，至少储备 4 期内容，并确认 broker list 和 schedule 是否就绪。",
+        "title_zh": "Broker Email Campaign"
+      },
+      "solene|main-visual-poster-first-version": {
+        "description_zh": "制作一张主图（楼盘、卖点、价格）和一张信息图（地图、features），并确认是否适合朋友圈/群传播。",
+        "title_zh": "主视觉海报首版"
+      },
+      "solene|navigation-arrival-guide": {
+        "description_zh": "整理 driving 路线、地铁路线、周边 landmark，确保第一次来的人也能顺利到达。",
+        "title_zh": "导航与到达指引"
+      },
+      "solene|pr-release": {
+        "description_zh": "主动联系媒体，准备中英文 press release，并确认是否存在免费曝光渠道。",
+        "title_zh": "PR 发布"
+      },
+      "verona|company-video-room-tour-later": {
+        "description_zh": "照片完成后再做公司视频；家具和时间合适后再安排 room tour。",
+        "title_zh": "公司视频与 room tour 后续拍摄"
+      },
+      "verona|photo-first-version": {
+        "description_zh": "优先交付 Verona 照片首版，再推进后续视频工作。",
+        "title_zh": "照片首版"
+      },
+      "year-end-summit|2025-recap-video": {
+        "description_zh": "导出 2025 recap video，格式为 .mp4 / H.264。",
+        "title_zh": "2025 recap 视频"
+      },
+      "year-end-summit|final-pptx-pdf-backup": {
+        "description_zh": "准备最终 .pptx 与 .pdf backup。",
+        "title_zh": "最终 pptx/pdf 备份"
+      },
+      "year-end-summit|final-timed-run-of-show": {
+        "description_zh": "完成带 cue 的最终 timed run-of-show。",
+        "title_zh": "最终带 cue 的 timed run-of-show"
+      },
+      "year-end-summit|music-files": {
+        "description_zh": "将音乐文件下载到本地，格式为 .mp3 或 .m4a。",
+        "title_zh": "音乐文件本地下载"
+      }
+    },
+    "missing_expected_canonical_keys": [],
+    "role_action_keys": {
+      "Chris": [
+        "belmont|yoyo-jason-youtube-video"
+      ],
+      "Henry": [
+        "verona|company-video-room-tour-later",
+        "verona|photo-first-version"
+      ],
+      "Iris": [
+        "admin-task-ops|sync-all-tasks-to-task-table",
+        "social-content|yesterday-event-social-publishing"
+      ],
+      "Tara.L": [
+        "belmont|broker-folder-social-ads-video-update"
+      ],
+      "阿可": [
+        "1847-hudson-blvd|arrival-map-address-description",
+        "admin-task-ops|sync-all-tasks-to-task-table",
+        "company-blog-agent-front-desk|district-intro-copy",
+        "social-content|yesterday-event-social-publishing"
+      ]
+    },
+    "role_mention_keys": {
+      "Chris": [
+        "belmont|yoyo-jason-youtube-video",
+        "year-end-summit|2025-recap-video",
+        "year-end-summit|final-pptx-pdf-backup",
+        "year-end-summit|final-timed-run-of-show",
+        "year-end-summit|music-files"
+      ],
+      "Henry": [
+        "verona|company-video-room-tour-later",
+        "verona|photo-first-version",
+        "year-end-summit|2025-recap-video",
+        "year-end-summit|final-pptx-pdf-backup",
+        "year-end-summit|final-timed-run-of-show",
+        "year-end-summit|music-files"
+      ],
+      "Iris": [
+        "admin-task-ops|sync-all-tasks-to-task-table",
+        "social-content|yesterday-event-social-publishing",
+        "year-end-summit|2025-recap-video",
+        "year-end-summit|final-pptx-pdf-backup",
+        "year-end-summit|final-timed-run-of-show",
+        "year-end-summit|music-files"
+      ],
+      "Tara.L": [
+        "belmont|broker-folder-social-ads-video-update",
+        "year-end-summit|2025-recap-video",
+        "year-end-summit|final-pptx-pdf-backup",
+        "year-end-summit|final-timed-run-of-show",
+        "year-end-summit|music-files"
+      ],
+      "阿可": [
+        "1847-hudson-blvd|arrival-map-address-description",
+        "admin-task-ops|sync-all-tasks-to-task-table",
+        "company-blog-agent-front-desk|district-intro-copy",
+        "social-content|yesterday-event-social-publishing",
+        "year-end-summit|2025-recap-video",
+        "year-end-summit|final-pptx-pdf-backup",
+        "year-end-summit|final-timed-run-of-show",
+        "year-end-summit|music-files"
+      ]
+    },
+    "runs": [
+      {
+        "error_message": null,
+        "extractor_mode": "llm_vision",
+        "new_messages_count": 3,
+        "new_tasks_count": 5,
+        "run_id": 1,
+        "snapshot_id": "10am",
+        "status": "success",
+        "updated_tasks_count": 0
+      },
+      {
+        "error_message": null,
+        "extractor_mode": "llm_vision",
+        "new_messages_count": 12,
+        "new_tasks_count": 6,
+        "run_id": 2,
+        "snapshot_id": "12pm",
+        "status": "success",
+        "updated_tasks_count": 5
+      },
+      {
+        "error_message": null,
+        "extractor_mode": "llm_vision",
+        "new_messages_count": 6,
+        "new_tasks_count": 6,
+        "run_id": 3,
+        "snapshot_id": "2pm",
+        "status": "success",
+        "updated_tasks_count": 4
+      },
+      {
+        "error_message": null,
+        "extractor_mode": "text_fixture",
+        "new_messages_count": 5,
+        "new_tasks_count": 0,
+        "run_id": 4,
+        "snapshot_id": "done_update",
+        "status": "success",
+        "updated_tasks_count": 5
+      }
+    ],
+    "status_count": {
+      "done": 5,
+      "todo": 12
+    },
+    "task_count_by_project": {
+      "1847 Hudson Blvd": 1,
+      "Admin / Task Ops": 1,
+      "Belmont": 2,
+      "Company Blog / Agent Front Desk": 1,
+      "Social Content": 1,
+      "Solene": 5,
+      "Verona": 2,
+      "Year-end Summit": 4
+    },
+    "total_tasks": 17
+  },
+  "comparison": {
+    "canonical_keys_match": true,
+    "extra_in_candidate": [],
+    "missing_from_candidate": [],
+    "project_counts_match": true,
+    "role_action_diffs": {},
+    "role_mention_diffs": {},
+    "status_counts_match": true,
+    "total_tasks_match": true,
+    "zh_display_text_diffs": {},
+    "zh_display_text_match": true
+  },
+  "mode": "llm_vision",
+  "model": "gpt-5.5",
+  "status": "success"
+}

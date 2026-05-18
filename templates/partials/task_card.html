@@ -1,0 +1,81 @@
+<article
+  class="task-card {% if task.is_current_user_related %}self{% endif %} {% if task.status == 'done' %}done{% endif %}"
+  data-task-row
+  data-status="{{ task.status }}"
+  data-project-filter="{{ task.project_filter }}"
+  data-is-self="{{ 'true' if task.is_current_user_related else 'false' }}"
+  data-viewer-roles="{{ task.viewer_roles|join('|') }}"
+  data-viewer-action-roles="{{ task.viewer_action_roles|join('|') }}"
+  data-needs-review="{{ 'true' if task.needs_review else 'false' }}"
+  data-due-today="{{ 'true' if task.is_due_today else 'false' }}"
+>
+  <div class="task-card-head">
+    <div>
+      <p class="task-project">{{ task.project }}</p>
+      <h4 data-en="{{ task.title_en }}" data-zh="{{ task.title_zh }}">{{ task.title_en }}</h4>
+    </div>
+    <div class="task-status-stack">
+      <span class="badge status {{ task.status }}" data-status-label="{{ task.status }}">{{ task.status }}</span>
+      <span class="badge self-badge" data-viewer-badge hidden>@Me</span>
+    </div>
+  </div>
+
+  <p class="task-desc" data-en="{{ task.description_en }}" data-zh="{{ task.description_zh }}">{{ task.description_en }}</p>
+
+  <div class="people-grid">
+    <div>
+      <strong data-i18n="assignees_label">assignees</strong>
+      <div class="person-chips">
+        {% if task.assignees %}
+          {% for person in task.assignees %}
+            <span class="person-chip {% if person == metadata.current_user %}self-person{% endif %}" data-person="{{ person }}" data-person-label="{{ person }}">{{ person }}</span>
+          {% endfor %}
+        {% else %}
+          <span class="person-chip muted" data-i18n="unassigned_label">Unassigned</span>
+        {% endif %}
+      </div>
+    </div>
+    <div>
+      <strong data-i18n="mentions_label">mentioned users</strong>
+      <div class="person-chips">
+        {% if task.mentioned_users %}
+          {% for person in task.mentioned_users %}
+            <span class="person-chip {% if person == metadata.current_user %}self-person{% endif %}" data-person="{{ person }}" data-person-label="@{{ person }}">@{{ person }}</span>
+          {% endfor %}
+        {% else %}
+          <span class="person-chip muted" data-i18n="none_label">None</span>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="task-meta-row">
+    <span class="due-display">
+      <strong data-i18n="due_col">Due</strong>
+      {% if task.due_text %}
+        <span>{{ task.due_text }}</span>
+      {% else %}
+        <span data-i18n="missing_due">Missing due</span>
+      {% endif %}
+      <span aria-hidden="true">&rarr;</span>
+      {% if task.due_at %}
+        <span>{{ task.due_resolved_label }}</span>
+      {% else %}
+        <span data-i18n="needs_review_badge">Needs review</span>
+      {% endif %}
+    </span>
+    <span><strong data-i18n="source_col">Source</strong> {{ task.source_message_time }}</span>
+  </div>
+
+  {% if task.needs_review %}
+    <div class="badges reason-list">
+      {% for reason in task.review_reasons %}
+        <span class="badge warn" data-reason-label="{{ reason }}">{{ reason }}</span>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <div class="task-card-foot">
+    {% include "partials/evidence.html" %}
+  </div>
+</article>

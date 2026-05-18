@@ -1,0 +1,11 @@
+{% set todo_items = priority_todo if priority_todo is defined else my_todo %}
+{% if todo_items %}
+  <div class="task-card-grid my-todo-grid" data-my-todo-grid>
+  {% for task in todo_items %}
+    {% include "partials/task_card.html" %}
+  {% endfor %}
+  </div>
+  <p class="empty" data-my-todo-empty data-i18n="empty_my_todo" hidden>No current-user tasks yet.</p>
+{% else %}
+  <p class="empty" data-my-todo-empty data-i18n="empty_my_todo">No current-user tasks yet.</p>
+{% endif %}

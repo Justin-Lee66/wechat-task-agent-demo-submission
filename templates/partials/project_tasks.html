@@ -1,0 +1,17 @@
+{% if project_groups %}
+  {% for project, tasks in project_groups.items() %}
+    <section class="project-block" id="{{ tasks[0].project_anchor }}" data-project-section data-project-filter="{{ tasks[0].project_filter }}">
+      <div class="project-title-row">
+        <h3>{{ project }}</h3>
+        <span>{{ tasks|length }}</span>
+      </div>
+      <div class="task-card-grid">
+        {% for task in tasks %}
+          {% include "partials/task_card.html" %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+{% else %}
+  <p class="empty" data-i18n="empty_projects">Use the demo controls above to ingest the 10am, 12pm, and 2pm fixtures.</p>
+{% endif %}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WeChat Task Agent Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='app.css') }}">
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="modal-backdrop" id="evidence-modal" aria-hidden="true" hidden>
+      <section class="evidence-modal" role="dialog" aria-modal="true" aria-labelledby="evidence-modal-title">
+        <button class="modal-close" id="evidence-close" type="button" aria-label="Close">×</button>
+        <div class="modal-head">
+          <p class="eyebrow" data-i18n="evidence_label">Evidence</p>
+          <h2 id="evidence-modal-title"></h2>
+          <p id="evidence-modal-subtitle"></p>
+          <p class="demo-only-note" id="evidence-demo-only" data-i18n="demo_only_fixture_label" hidden>Demo-only status update fixture</p>
+        </div>
+        <div class="evidence-modal-grid">
+          <section>
+            <h3 data-i18n="source_messages_label">Raw source messages</h3>
+            <div id="evidence-raw-messages"></div>
+          </section>
+          <section>
+            <h3 data-i18n="screenshot_label">Source image</h3>
+            <button class="screenshot-button" id="evidence-screenshot-button" type="button" hidden>
+              <img id="evidence-screenshot" alt="Source image evidence">
+            </button>
+            <p class="empty compact" id="evidence-text-only" data-i18n="text_only_evidence" hidden>Text-only evidence. No source image for this demo-only update.</p>
+          </section>
+        </div>
+        <section class="parsed-fields" id="evidence-fields"></section>
+      </section>
+    </div>
+    <div class="lightbox" id="lightbox" hidden>
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+      <img id="lightbox-image" alt="Source image evidence">
+    </div>
+    <script src="{{ url_for('static', path='app.js') }}?v=assigned-todo"></script>
+  </body>
+</html>

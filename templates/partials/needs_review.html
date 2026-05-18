@@ -1,0 +1,9 @@
+{% if needs_review %}
+  <div class="task-card-grid review-grid">
+  {% for task in needs_review %}
+    {% include "partials/task_card.html" %}
+  {% endfor %}
+  </div>
+{% else %}
+  <p class="empty" data-i18n="empty_review">No fuzzy tasks yet.</p>
+{% endif %}

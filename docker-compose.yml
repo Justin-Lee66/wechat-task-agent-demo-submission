@@ -1,0 +1,10 @@
+services:
+  wechat-task-agent-demo:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      DEMO_BASE_DATETIME: "2025-05-16T09:00:00"
+      EXTRACTOR_MODE: "text_fixture"
+    volumes:
+      - ./data:/app/data

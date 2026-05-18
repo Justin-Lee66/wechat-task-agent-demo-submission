@@ -1,0 +1,167 @@
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand-block">
+      <div class="brand-logo" aria-label="Acre New York Realty">
+        <img src="{{ url_for('static', path='acre-logo.svg') }}" alt="Acre New York Realty">
+      </div>
+      <h1>WeChat Task Agent</h1>
+    </div>
+
+    <section class="side-section demo-state-section">
+      <h2 data-i18n="demo_state_label">Demo state</h2>
+      <dl class="state-list">
+        <div>
+          <dt data-i18n="current_snapshot_label">Current stage</dt>
+          <dd data-snapshot-label="{{ metadata.current_snapshot }}">{{ metadata.current_snapshot }}</dd>
+        </div>
+        <div>
+          <dt data-i18n="simulation_date_label">Simulation date</dt>
+          <dd data-en="{{ metadata.fixture_date }} {{ metadata.fixture_weekday_en }}" data-zh="{{ metadata.fixture_date }} {{ metadata.fixture_weekday_zh }}">{{ metadata.fixture_date }} {{ metadata.fixture_weekday_en }}</dd>
+        </div>
+        <div class="viewer-state-row">
+          <dt data-i18n="current_user_label">Current user</dt>
+          <dd class="viewer-state-value">
+            <span class="viewer-select-shell">
+              <select class="viewer-select" id="viewer-select" aria-label="Current user">
+                <option value="manager" data-en="Manager" data-zh="经理">Manager</option>
+                <option value="阿可" data-en="阿可" data-zh="阿可" selected>阿可</option>
+                <option value="Henry" data-en="Henry" data-zh="Henry">Henry</option>
+                <option value="Iris" data-en="Iris" data-zh="Iris">Iris</option>
+                <option value="Tara.L" data-en="Tara.L" data-zh="Tara.L">Tara.L</option>
+                <option value="Chris" data-en="Chris" data-zh="Chris">Chris</option>
+              </select>
+            </span>
+          </dd>
+        </div>
+        <div>
+          <dt data-i18n="extractor_mode_label">Extractor</dt>
+          <dd class="viewer-state-value">
+            <span class="viewer-select-shell extractor-select-shell">
+              <select class="viewer-select extractor-select" id="extractor-select" aria-label="Extractor mode">
+                <option value="text_fixture" selected>text_fixture</option>
+                <option value="llm_text">llm_text</option>
+                <option value="llm_vision">llm_vision</option>
+              </select>
+            </span>
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+    <nav class="side-nav" aria-label="Dashboard navigation">
+      <a href="#my-todo" data-i18n="nav_my_todo">My Todo</a>
+      <a href="#projects" data-i18n="nav_projects">Project Board</a>
+      <a href="#review" data-i18n="nav_review">Needs Review</a>
+      <a href="#run-log" data-i18n="nav_runs">Run Log</a>
+    </nav>
+  </aside>
+
+  <div class="main-shell">
+    <header class="main-topbar">
+      <div class="status-pill" id="refresh-status" data-i18n="auto_refresh_on">Auto-refresh on</div>
+      <div class="language-menu">
+        <button class="language-button" id="language-menu-button" type="button" aria-haspopup="true" aria-expanded="false">🌐 EN ▾</button>
+        <div class="language-options" id="language-menu-options" hidden>
+          <button type="button" data-language-choice="en">English</button>
+          <button type="button" data-language-choice="zh">中文</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero-card" id="overview">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="subtitle">Operations Dashboard</p>
+        <h2 data-i18n="page_title">WeChat Task Agent</h2>
+        <p data-i18n="hero_subtitle">Turn WeChat group updates into deduplicated project tasks and review-ready action lists.</p>
+      </div>
+      <div class="hero-actions">
+        <button class="primary" id="run-full-demo" data-i18n="run_full_demo">Run Full Demo</button>
+        <details class="manual-controls">
+          <summary data-i18n="manual_controls">Manual Controls</summary>
+          <div class="manual-grid">
+            <button data-action-button data-ingest="10am" data-i18n="run_10am">Run 10am</button>
+            <button data-action-button data-ingest="12pm" data-i18n="run_12pm">Run 12pm</button>
+            <button data-action-button data-ingest="2pm" data-i18n="run_2pm">Run 2pm</button>
+            <button data-action-button data-ingest="done_update" data-i18n="run_done">Run status update</button>
+            <button data-action-button class="danger" id="reset-db" data-i18n="reset_db">Reset database</button>
+          </div>
+        </details>
+      </div>
+      <div class="demo-progress" id="demo-progress" hidden></div>
+      <ol class="timeline" aria-label="Demo progression">
+        {% for step in timeline_steps %}
+          <li class="{% if step.completed %}completed{% endif %} {% if step.current %}current{% endif %}" data-timeline-step="{{ step.snapshot }}">
+            <span data-en="{{ step.label_en }}" data-zh="{{ step.label_zh }}">{{ step.label_en }}</span>
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    <section class="kpis">
+      <article><span data-i18n="kpi_total">Total tasks</span><strong data-kpi="total">{{ kpis.total }}</strong></article>
+      <article class="me"><span data-kpi-secondary-label data-i18n="kpi_me">My tasks</span><strong data-kpi="secondary">{{ kpis.me }}</strong></article>
+      <article><span data-kpi-label="due" data-i18n="kpi_due">Due today</span><strong data-kpi="due">{{ kpis.due_today }}</strong></article>
+      <article class="review"><span data-kpi-label="review" data-i18n="kpi_review">Needs review</span><strong data-kpi="review">{{ kpis.needs_review }}</strong></article>
+      <article><span data-kpi-label="done" data-i18n="kpi_done">Done</span><strong data-kpi="done">{{ kpis.done }}</strong></article>
+    </section>
+
+    <section class="panel wide my-todo-panel" id="my-todo">
+      <div class="panel-head">
+        <div>
+          <h2 data-role-todo-title data-i18n="my_todo_title">My Todo</h2>
+          <p data-role-todo-subtitle>Viewing as 阿可 · sorted by due date</p>
+        </div>
+        <span><strong data-my-todo-count>{{ my_todo|length }}</strong> <span data-todo-count-label data-i18n="active_label">active</span></span>
+      </div>
+      {% include "partials/today_todo.html" %}
+    </section>
+
+    <section class="panel wide project-panel" id="projects">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" data-i18n="project_filter_label">Project filter</p>
+          <h2 data-i18n="projects_title">Project Board</h2>
+        </div>
+        <span><strong>{{ project_groups|length }}</strong> <span data-i18n="projects_count_label">projects</span></span>
+      </div>
+      <div class="project-filter-bar">
+        <button class="chip active" data-project-filter-button="all" data-i18n="filter_all">All</button>
+        <button class="chip" data-project-filter-button="viewer" data-viewer-only-chip>Only 阿可</button>
+        {% for project, tasks in project_groups.items() %}
+          <button class="chip" data-project-filter-button="{{ tasks[0].project_filter }}">{{ project }}</button>
+        {% endfor %}
+      </div>
+      <div class="section-scroll project-scroll">
+        {% include "partials/project_tasks.html" %}
+      </div>
+    </section>
+
+    <section class="panel wide review-panel" id="review">
+      <div class="panel-head">
+        <div>
+          <h2 data-i18n="review_title">Needs Review</h2>
+          <p data-i18n="review_help">Needs Review means the task is actionable but missing reliable owner/date information or contains ambiguous timing.</p>
+        </div>
+        <span><strong>{{ needs_review|length }}</strong> <span data-i18n="fuzzy_label">fuzzy</span></span>
+      </div>
+      <div class="review-filter-bar">
+        <button class="chip active" data-review-filter-button="all" data-i18n="filter_all">All</button>
+        <button class="chip" data-review-filter-button="viewer" data-viewer-only-chip>Only 阿可</button>
+        {% for project, tasks in project_groups.items() %}
+          <button class="chip" data-review-filter-button="{{ tasks[0].project_filter }}">{{ project }}</button>
+        {% endfor %}
+      </div>
+      <div class="section-scroll review-scroll">
+        {% include "partials/needs_review.html" %}
+      </div>
+    </section>
+
+    <details class="panel wide run-log" id="run-log">
+      <summary>
+        <span data-i18n="runs_title">Ingestion Run Log</span>
+        <small data-i18n="latest_12">latest 12</small>
+      </summary>
+      {% include "partials/ingestion_runs.html" %}
+    </details>
+  </div>
+</div>

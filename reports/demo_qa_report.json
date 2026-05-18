@@ -1,0 +1,134 @@
+{
+  "admin_task_assignees_mentions_correct": true,
+  "admin_task_context_enriched": true,
+  "admin_task_evidence_has_sync_message": true,
+  "admin_task_evidence_has_year_end_context": true,
+  "admin_task_evidence_message_count": 2,
+  "admin_task_preserved": true,
+  "ake_completion_done": true,
+  "all_canonical_keys": [
+    "1847-hudson-blvd|arrival-map-address-description",
+    "admin-task-ops|sync-all-tasks-to-task-table",
+    "belmont|broker-folder-social-ads-video-update",
+    "belmont|yoyo-jason-youtube-video",
+    "company-blog-agent-front-desk|district-intro-copy",
+    "social-content|yesterday-event-social-publishing",
+    "solene|ai-teaser-video",
+    "solene|broker-email-campaign",
+    "solene|main-visual-poster-first-version",
+    "solene|navigation-arrival-guide",
+    "solene|pr-release",
+    "verona|company-video-room-tour-later",
+    "verona|photo-first-version",
+    "year-end-summit|2025-recap-video",
+    "year-end-summit|final-pptx-pdf-backup",
+    "year-end-summit|final-timed-run-of-show",
+    "year-end-summit|music-files"
+  ],
+  "belmont_youtube_done_after_update": true,
+  "chris_completion_done": true,
+  "duplicate_canonical_keys": [],
+  "henry_completion_done": true,
+  "hudson_blvd_description_map_merged_into_one_task": true,
+  "ingestion_runs": [
+    {
+      "error_message": null,
+      "extractor_mode": "text_fixture",
+      "new_messages_count": 3,
+      "new_tasks_count": 5,
+      "run_id": 1,
+      "snapshot_id": "10am",
+      "status": "success",
+      "updated_tasks_count": 0
+    },
+    {
+      "error_message": null,
+      "extractor_mode": "text_fixture",
+      "new_messages_count": 9,
+      "new_tasks_count": 6,
+      "run_id": 2,
+      "snapshot_id": "12pm",
+      "status": "success",
+      "updated_tasks_count": 3
+    },
+    {
+      "error_message": null,
+      "extractor_mode": "text_fixture",
+      "new_messages_count": 3,
+      "new_tasks_count": 6,
+      "run_id": 3,
+      "snapshot_id": "2pm",
+      "status": "success",
+      "updated_tasks_count": 2
+    },
+    {
+      "error_message": null,
+      "extractor_mode": "text_fixture",
+      "new_messages_count": 5,
+      "new_tasks_count": 0,
+      "run_id": 4,
+      "snapshot_id": "done_update",
+      "status": "success",
+      "updated_tasks_count": 5
+    }
+  ],
+  "ingestion_runs_from_db": [
+    {
+      "error_message": null,
+      "extractor_mode": "text_fixture",
+      "new_messages_count": 3,
+      "new_tasks_count": 5,
+      "snapshot_id": "10am",
+      "status": "success",
+      "updated_tasks_count": 0
+    },
+    {
+      "error_message": null,
+      "extractor_mode": "text_fixture",
+      "new_messages_count": 9,
+      "new_tasks_count": 6,
+      "snapshot_id": "12pm",
+      "status": "success",
+      "updated_tasks_count": 3
+    },
+    {
+      "error_message": null,
+      "extractor_mode": "text_fixture",
+      "new_messages_count": 3,
+      "new_tasks_count": 6,
+      "snapshot_id": "2pm",
+      "status": "success",
+      "updated_tasks_count": 2
+    },
+    {
+      "error_message": null,
+      "extractor_mode": "text_fixture",
+      "new_messages_count": 5,
+      "new_tasks_count": 0,
+      "snapshot_id": "done_update",
+      "status": "success",
+      "updated_tasks_count": 5
+    }
+  ],
+  "iris_completion_done": true,
+  "missing_expected_canonical_keys": [],
+  "needs_review_count": 13,
+  "self_task_count": 8,
+  "solene_main_visual_merged_into_one_task": true,
+  "status_count": {
+    "done": 5,
+    "todo": 12
+  },
+  "tara_completion_done": true,
+  "task_count_by_project": {
+    "1847 Hudson Blvd": 1,
+    "Admin / Task Ops": 1,
+    "Belmont": 2,
+    "Company Blog / Agent Front Desk": 1,
+    "Social Content": 1,
+    "Solene": 5,
+    "Verona": 2,
+    "Year-end Summit": 4
+  },
+  "total_tasks": 17
+}
